@@ -1,5 +1,5 @@
 import StockItem from './StockItem';
-import Card from './Card'
+import Card from '../UI/Card'
 
 const Stocks =(props)=> {
 

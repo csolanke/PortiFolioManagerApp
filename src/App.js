@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Stocks from './components/Stocks';
-import StockItem from './components/StockItem';
+import Stocks from './components/stocks/Stocks';
+import StockItem from './components/stocks/StockItem'
 
 const App = () => {
 

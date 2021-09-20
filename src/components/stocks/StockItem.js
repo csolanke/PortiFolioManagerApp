@@ -1,6 +1,6 @@
 import './StockItem.css'
 import StockDate from './StockDate'
-import Card from './Card'
+import Card from '../UI/Card'
 
 
 const StockItem = (props)=> {
