@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import Stocks from './components/stocks/Stocks';
-import StockItem from './components/stocks/StockItem'
+import NewStock from './components/NewStock/NewStock'
 
 const App = () => {
 
@@ -33,7 +32,7 @@ const App = () => {
 
   return (
     <div>
-      <h1 align="center">PORTFOLIO MANAGER</h1>
+     <NewStock/>
      <Stocks stocks={stocks}></Stocks>
     </div>
   );
