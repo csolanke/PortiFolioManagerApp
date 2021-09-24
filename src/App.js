@@ -1,10 +1,12 @@
 import './App.css';
+import {useState} from 'react';
 import Stocks from './components/stocks/Stocks';
 import NewStock from './components/NewStock/NewStock'
 
 const App = () => {
 
-  const stocks = [
+ 
+  const initial_stocks = [
     {
       name: 'EPL',
       price: 450,
@@ -30,10 +32,22 @@ const App = () => {
 
   ]
 
+  const [list,setList] = useState(initial_stocks);
+
+  const stockDataHandler=(stockdata)=>
+  {
+    console.log(stockdata)
+    setList((prevList)=>
+    {
+      console.log(prevList);
+      return [...prevList,stockdata];
+    });
+  };
+
   return (
     <div>
-     <NewStock/>
-     <Stocks stocks={stocks}></Stocks>
+     <NewStock onNewStock={stockDataHandler}/>
+     <Stocks stocks={list}></Stocks>
     </div>
   );
 }

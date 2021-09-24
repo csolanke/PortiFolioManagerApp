@@ -1,6 +1,11 @@
 import './StockForm.css';
 import React, {useState} from 'react';
-const StockForm = () => {
+const StockForm = (props) => {
+
+    const date = new Date(2021,8,10);
+    let  month = date.toLocaleString('en-US',{month:'long'});
+    let  day = date.toLocaleString('en-US',{day:'2-digit'});
+    let year =date.getFullYear();
 
     const [enteredName,setEnteredName] = useState('');
     const [enteredPrice,setEnteredPrice] = useState('');
@@ -16,26 +21,29 @@ const StockForm = () => {
 
     const dateChangeHandler=(event)=>{
        setEnteredDate(event.target.value)
+
+     
     }
 
    const submitHandler=(event)=>{
        event.preventDefault();
 
-   }
-
-
-    const enteredData ={
+       const enteredData ={
 
         name: enteredName,
         price :enteredPrice,
-        date : new Date(enteredDate)
+        day : day,
+        month : month,
+        year : year
     }
-    console.log(enteredData);
+   
+    props.onSaveOfStockData(enteredData);
 
-    //  setEnteredDate('');
-    //  setEnteredName('');
-    //  setEnteredPrice('');
+     setEnteredDate('');
+    setEnteredName('');
+     setEnteredPrice('');
 
+   }
 
     return <form onSubmit={submitHandler}>
         <div className="new-stock__controls">
