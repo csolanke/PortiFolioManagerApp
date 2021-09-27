@@ -40,7 +40,7 @@ const StockForm = (props) => {
         year : year
     }
    
-    console.log(enteredData);
+    //console.log(enteredData);
     props.onSaveOfStockData(enteredData);
 
      setEnteredDate('');

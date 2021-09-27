@@ -36,10 +36,10 @@ const App = () => {
 
   const stockDataHandler=(stockdata)=>
   {
-    console.log(stockdata)
+   // console.log(stockdata)
     setList((prevList)=>
     {
-      console.log(prevList);
+     // console.log(prevList);
       return [...prevList,stockdata];
     });
   };
