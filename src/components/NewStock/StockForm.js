@@ -2,10 +2,7 @@ import './StockForm.css';
 import React, {useState} from 'react';
 const StockForm = (props) => {
 
-    const date = new Date(2021,8,10);
-    let  month = date.toLocaleString('en-US',{month:'long'});
-    let  day = date.toLocaleString('en-US',{day:'2-digit'});
-    let year =date.getFullYear();
+ 
 
     const [enteredName,setEnteredName] = useState('');
     const [enteredPrice,setEnteredPrice] = useState('');
@@ -28,19 +25,26 @@ const StockForm = (props) => {
    const submitHandler=(event)=>{
        event.preventDefault();
 
+
+       const date = new Date(enteredDate);
+       let  month = date.toLocaleString('en-US',{month:'long'});
+       let  day = parseInt(date.toLocaleString('en-US',{day:'2-digit'}));
+       let year =date.getFullYear();
+
        const enteredData ={
 
         name: enteredName,
         price :enteredPrice,
-        day : day,
+        day : day +1  ,
         month : month,
         year : year
     }
    
+    console.log(enteredData);
     props.onSaveOfStockData(enteredData);
 
      setEnteredDate('');
-    setEnteredName('');
+     setEnteredName('');
      setEnteredPrice('');
 
    }
