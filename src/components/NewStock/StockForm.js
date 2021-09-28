@@ -37,7 +37,8 @@ const StockForm = (props) => {
         price :enteredPrice,
         day : day +1  ,
         month : month,
-        year : year
+        year : year,
+        id : Math.random
     }
    
     //console.log(enteredData);

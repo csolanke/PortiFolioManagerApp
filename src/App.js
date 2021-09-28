@@ -8,6 +8,7 @@ const App = () => {
  
   const initial_stocks = [
     {
+      id : 1,
       name: 'EPL',
       price: 450,
       day: 17,
@@ -15,6 +16,7 @@ const App = () => {
       year: 2021
     },
     {
+      id : 2,
       name: 'ITC',
       price: 230,
       day: 18,
@@ -22,6 +24,7 @@ const App = () => {
       year: 2021
     },
     {
+      id : 3,
       name: 'HFCL',
       price: 2000,
       day: 18,
