@@ -7,6 +7,7 @@ const StockForm = (props) => {
     const [enteredName,setEnteredName] = useState('');
     const [enteredPrice,setEnteredPrice] = useState('');
     const [enteredDate,setEnteredDate] = useState('');
+    const [enteredQuantity,setEnteredQuantity] = useState('');
 
     const nameChangeHandler=(event)=>{
         setEnteredName(event.target.value)
@@ -21,6 +22,12 @@ const StockForm = (props) => {
 
      
     }
+
+    const quantityChangeHandler=(event)=>{
+        setEnteredQuantity(event.target.value)
+ 
+      
+     }
 
    const submitHandler=(event)=>{
        event.preventDefault();
@@ -38,7 +45,8 @@ const StockForm = (props) => {
         day : day +1  ,
         month : month,
         year : year,
-        id : Math.random
+        id : Math.random,
+        quantity :enteredQuantity
     }
    
     //console.log(enteredData);
@@ -47,6 +55,7 @@ const StockForm = (props) => {
      setEnteredDate('');
      setEnteredName('');
      setEnteredPrice('');
+     setEnteredQuantity('');
 
    }
 
@@ -61,6 +70,11 @@ const StockForm = (props) => {
             <div className="new-stock__control">
                 <label>Price</label>
                 <input type='number' value ={enteredPrice} onChange={priceChangeHandler}/>
+            </div>
+
+            <div className="new-stock__control">
+                <label>Quantity</label>
+                <input type='number' value ={enteredQuantity} onChange={quantityChangeHandler}/>
             </div>
 
             <div className="new-stock__control">

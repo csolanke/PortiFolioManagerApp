@@ -12,7 +12,8 @@ const Stocks = (props) => {
         day={ab.day}
         month={ab.month}
         year={ab.year}
-        key={ab.id}  />)}
+        key={ab.id} 
+        quantity={ab.quantity} />)}
 
     </Card>
   )

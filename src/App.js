@@ -13,7 +13,8 @@ const App = () => {
       price: 450,
       day: 17,
       month: 'September',
-      year: 2021
+      year: 2021,
+      quantity : 30
     },
     {
       id : 2,
@@ -21,7 +22,8 @@ const App = () => {
       price: 230,
       day: 18,
       month: 'March',
-      year: 2021
+      year: 2021,
+      quantity : 30
     },
     {
       id : 3,
@@ -29,7 +31,8 @@ const App = () => {
       price: 2000,
       day: 18,
       month: 'May',
-      year: 2021
+      year: 2021,
+      quantity : 30
 
     }
 
