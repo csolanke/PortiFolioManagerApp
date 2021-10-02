@@ -1,6 +1,7 @@
 import './App.css';
 import {useState} from 'react';
 import Stocks from './components/stocks/Stocks';
+import StockFilter from './components/stocks/Stocks';
 import NewStock from './components/NewStock/NewStock'
 
 const App = () => {
@@ -34,6 +35,16 @@ const App = () => {
       year: 2021,
       quantity : 30
 
+    },
+    {
+      id : 4,
+      name: 'IRCTC',
+      price: 3500,
+      day: 18,
+      month: 'May',
+      year: 2023,
+      quantity : 30
+
     }
 
   ]
@@ -52,7 +63,12 @@ const App = () => {
 
   return (
     <div>
+
+
      <NewStock onNewStock={stockDataHandler}/>
+     
+     
+    
      <Stocks stocks={list}></Stocks>
     </div>
   );
