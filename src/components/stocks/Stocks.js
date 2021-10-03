@@ -1,4 +1,4 @@
-import StockItem from './StockItem';
+import StockList from './StockList';
 import React, { useState } from 'react';
 
 import Card from '../UI/Card'
@@ -19,27 +19,12 @@ const Stocks = (props) => {
     }
   );
 
-let stockContent = <p>No Expense Found</p>
-
-if(filteredStocks.length> 0)
-{
-  stockContent = (filteredStocks.map(ab => <StockItem
-    name={ab.name}
-    price={ab.price}
-    day={ab.day}
-    month={ab.month}
-    year={ab.year}
-    key={ab.id}
-    quantity={ab.quantity} />))
-
-}
-
   return (
 
     <div>
       <Card className="stocks">
         <StockFilter selected={filteredYear} onChangeFilter={filterChangeHandler}></StockFilter>
-       {stockContent}
+        <StockList items={filteredStocks}></StockList>
       </Card>
     </div>
   )

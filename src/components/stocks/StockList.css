@@ -1,0 +1,9 @@
+.stock-list{
+    list-style: none;
+    padding: 0;
+}
+
+.stock-list__fallback{
+    color: black;
+    text-align: center;
+}
