@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 import Card from '../UI/Card'
 import StockFilter from './StockFilter'
+import StocksChart from './StocksChart'
 
 const Stocks = (props) => {
 
@@ -24,6 +25,9 @@ const Stocks = (props) => {
     <div>
       <Card className="stocks">
         <StockFilter selected={filteredYear} onChangeFilter={filterChangeHandler}></StockFilter>
+      
+       <StocksChart stocks={filteredStocks}></StocksChart>
+
         <StockList items={filteredStocks}></StockList>
       </Card>
     </div>
