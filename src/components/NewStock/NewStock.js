@@ -27,7 +27,11 @@ const NewStock = (props) => {
       
       {
           !isEditing && (
-              <div><button onClick={startEditingHandler}>Add New Stock</button></div>
+              <div align="center"><button onClick={startEditingHandler} 
+               align='center'
+               style={{backgroundColor: "lightblue", height:'3rem', width:'10rem'}}
+              
+               >Add New Stock</button></div>
           )
       }
 

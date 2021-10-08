@@ -83,7 +83,7 @@ const StockForm = (props) => {
             </div>
             <div className="new-stock__actions">
             <button type="button" onClick={props.onCancel}>Cancel</button>
-            <button type="submit">Add to Holding</button>
+            <button type="submit" align='corner'>Add to Holding</button>
             </div>
 
         </div>
