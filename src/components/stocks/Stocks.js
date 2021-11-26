@@ -15,8 +15,8 @@ const Stocks = (props) => {
 
   const filteredStocks = props.stocks.filter(
     st => {
-      let convertedNum = Number(filteredYear);
-      return st.year === convertedNum;
+     // let convertedNum = Number(filteredYear);
+      return st.year === filteredYear;
     }
   );
 

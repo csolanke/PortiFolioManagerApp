@@ -24,19 +24,19 @@ const StocksChart =(props)=>
     for(const stock of props.stocks)
     {
         let stockMonth = -1;
-        if( stock.month === 'January')  
+        if( stock.month === 'Jan')  
         {
             stockMonth = 0;
         }
-        else if (stock.month === 'February')
+        else if (stock.month === 'Feb')
         {
             stockMonth = 1;
         }
-        else if (stock.month === 'March')
+        else if (stock.month === 'Mar')
         {
             stockMonth = 2;
         }
-        else if (stock.month === 'April')
+        else if (stock.month === 'Apr')
         {
             stockMonth = 3;
         }
@@ -44,31 +44,31 @@ const StocksChart =(props)=>
         {
             stockMonth = 4;
         }
-        else if (stock.month === 'June')
+        else if (stock.month === 'Jun')
         {
             stockMonth = 5;
         }
-        else if (stock.month === 'July')
+        else if (stock.month === 'Jul')
         {
             stockMonth = 6;
         }
-        else if (stock.month === 'August')
+        else if (stock.month === 'Aug')
         {
             stockMonth = 7;
         }
-        else if (stock.month === 'September')
+        else if (stock.month === 'Sept')
         {
             stockMonth = 8;
         }
-        else if (stock.month === 'October')
+        else if (stock.month === 'Oct')
         {
             stockMonth = 9;
         }
-        else if (stock.month === 'November')
+        else if (stock.month === 'Nov')
         {
             stockMonth = 10;
         }
-        else if (stock.month === 'December')
+        else if (stock.month === 'Dec')
         {
             stockMonth = 11;
         }

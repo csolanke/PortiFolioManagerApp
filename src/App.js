@@ -5,7 +5,7 @@ import NewStock from './components/NewStock/NewStock'
 
 const App = () => {
 
- const [intialList,setInitialList]=useState([]);
+ const [initialList,setInitialList]=useState([]);
 
  // added fetchIntialStocksHandler method pointer Inside useEffect Hook and provided no values inside array in that way this fetchIntialStocksHandler will get invoke only once 
 //during first rendering of this component. 
@@ -18,17 +18,20 @@ const App = () => {
     const data = await response.json();
 
     const transformedStocks =data.map((std)=>{
+
+      const myArray =std.purchaseDate.split('-');
       return {
         id : std.id,
         name: std.name,
         price: std.pricePurchased,
-        day :22,
-        month : 'November',
-        year : 2021,
+        day :myArray[0],
+        month :myArray[1],
+        year : myArray[2],
         quantity :std.quantityPurchased
       }
     });
   
+    console.log(transformedStocks);
     setInitialList(transformedStocks);
   }
 
@@ -41,7 +44,7 @@ const App = () => {
   return (
     <div>
       <NewStock onNewStock={stockDataHandler} />
-      <Stocks stocks={intialList}></Stocks>
+      <Stocks stocks={initialList}></Stocks>
     </div>
   );
 }
